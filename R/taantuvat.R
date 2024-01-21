@@ -1,0 +1,32 @@
+#' Municipalities with classes
+#'
+#' Joined together data set with administrative areas, calculated population
+#' loss/gain category and geometry
+#'
+#' @source `kunnat`, `aluejaot`, `vaestonmuutos`.
+#'
+#' @format Data frame with columns
+#' \describe{
+#'   \item{kunta_nro}{Three number municipality code}
+#'   \item{kunta_nimi}{Municipality name}
+#'   \item{kokmuutos_2010_2022}{Total population change from 2010 to 2022}
+#'   \item{suht_muutos_2010_2022}{Population change from 2010 to 2022 relative to population}
+#'   \item{luokka}{six categories used to describe level of population loss/gain}
+#'   \item{NUTS 1}{}
+#'   \item{Tukialue}{}
+#'   \item{ELY-keskus}{}
+#'   \item{Suuralue}{}
+#'   \item{Maakunta}{}
+#'   \item{Seutukunta}{}
+#'   \item{Leader}{}
+#'   \item{Alueluokka}{}
+#'   \item{Kuntaryhma}{}
+#'   \item{geom}{geometry column}
+#' }
+#' @examples
+#' if (require("sf")) {
+#'
+#' taantuvat
+#' }
+#'
+"taantuvat"
