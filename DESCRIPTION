@@ -9,8 +9,10 @@ Description: More about what it does (maybe more than one line)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/StranMax/rfinstats
+URL: https://github.com/StranMax/rfinstats, https://stranmax.github.io/rfinstats/
 BugReports: https://github.com/StranMax/rfinstats/issues
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.2.3
+Imports: 
+    sf

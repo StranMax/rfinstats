@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rfinstats is to ...
+This package contains some data sets from finnish statistial institute.
 
 ## Installation
 
@@ -31,6 +31,16 @@ devtools::install_github("StranMax/rfinstats")
 
 ```{r example}
 library(rfinstats)
-## basic example code
+```
+
+```{r}
+head(taantuvat)
+```
+
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2)
+ggplot() +
+  geom_sf(data = taantuvat, aes(fill = luokka)) +
+  theme_void()
 ```
 
