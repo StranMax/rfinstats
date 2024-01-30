@@ -21,6 +21,7 @@ unlink(tmp)
 
 # Kunta id and name in same column
 aluejaot[c("id", "Kunta")] <- stringr::str_split_fixed(aluejaot$Kunta, pattern = " ", n = 2)
+colnames(aluejaot)[which(names(aluejaot) == "Kunta")] <- "kunta"
 
 # Kunta id to first column
 aluejaot <- aluejaot[c(11, 1:10)]

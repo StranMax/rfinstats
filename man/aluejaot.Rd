@@ -8,7 +8,7 @@
 A data frame with 309 rows and 11 variables:
 \describe{
   \item{id}{Three number municipality code}
-  \item{Kunta}{Municipality name}
+  \item{kunta}{Municipality name}
   \item{NUTS 1}{}
   \item{Tukialue}{}
   \item{ELY-keskus}{}

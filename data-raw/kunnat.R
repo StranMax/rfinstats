@@ -32,6 +32,6 @@ unlink(tmp)
 kunnat$nimi[kunnat$nimi == "Maarianhamina - Mariehamn"] <- "Maarianhamina"
 
 kunnat <- kunnat |>
-  select(kunta_nro = kunta, kunta_nimi = nimi, geom)
+  select(id = kunta, kunta = nimi, geometry = geom)
 
 usethis::use_data(kunnat, overwrite = TRUE)

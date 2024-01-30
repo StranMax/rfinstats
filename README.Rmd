@@ -29,18 +29,38 @@ You can install the development version of rfinstats from [GitHub](https://githu
 devtools::install_github("StranMax/rfinstats")
 ```
 
-```{r example}
+```{r example, message=FALSE, warning=FALSE}
 library(rfinstats)
+library(dplyr)
+library(sf)
+library(ggplot2)
 ```
 
 ```{r}
 head(taantuvat)
 ```
 
-```{r, message=FALSE, warning=FALSE}
-library(ggplot2)
+```{r}
+taantuvat_sf <- left_join(taantuvat, kunnat) |> st_as_sf()
+```
+
+
+```{r}
 ggplot() +
-  geom_sf(data = taantuvat, aes(fill = luokka)) +
+  geom_sf(data = taantuvat_sf, aes(fill = luokka)) +
+  theme_void()
+```
+
+```{r}
+aluejaot_sf <- left_join(aluejaot, kunnat) |> st_as_sf()
+```
+
+```{r}
+aluejaot_sf |>
+  group_by(Maakunta) |>
+  summarise(n = n(), do_union = TRUE) |>
+  ggplot() +
+  geom_sf(aes(fill = Maakunta), show.legend = FALSE) +
   theme_void()
 ```
 
